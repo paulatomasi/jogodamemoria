@@ -8,40 +8,32 @@
 
 import Foundation
 
-protocol CardTextProvider {
+protocol CardTextProvider: AnyObject {
+    var emojis: [Int: String] { get set }
+    var emojisOptions: [String] { get set }
     
     func text(for identifier: Int) -> String
-    
+}
+
+extension CardTextProvider {
+    func text(for identifier: Int) -> String {
+        if let emoji = self.emojis[identifier] {
+            return emoji
+        }
+        
+        let emoji = emojisOptions.removeRandom()
+        self.emojis[identifier] = emoji
+        
+        return emoji
+    }
 }
 
 class CuteAnimalsEmojiProvider: CardTextProvider {
-    var emojisOptions = ["🐶", "🦁", "🐱", "🐵",]
     var emojis = [Int: String]()
-    
-    func text(for identifier: Int) -> String {
-        if let emoji = self.emojis[identifier] {
-            return emoji
-        }
-        
-        let emoji = self.emojisOptions.removeRandom()
-        self.emojis[identifier] = emoji
-        
-        return emoji
-    }
+    var emojisOptions = ["🐶", "🦁", "🐱", "🐵",]
 }
 
 class AwesomeFruitsEmojiProvider: CardTextProvider {
-    var emojisOptions = ["🍌", "🍉", "🍓", "🍑",]
     var emojis = [Int: String]()
-    
-    func text(for identifier: Int) -> String {
-        if let emoji = self.emojis[identifier] {
-            return emoji
-        }
-        
-        let emoji = self.emojisOptions.removeRandom()
-        self.emojis[identifier] = emoji
-        
-        return emoji
-    }
+    var emojisOptions = ["🍌", "🍉", "🍓", "🍑",]
 }
