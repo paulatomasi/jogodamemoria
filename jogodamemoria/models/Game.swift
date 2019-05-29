@@ -46,7 +46,20 @@ class Game {
             }
         }
     }
+    
+    func checkGameOver() -> Bool {
+        var isGameOver: Bool = false
+        
+        for card in self.cards {
+            if card.isMatched {
+                isGameOver = true
+            } else {
+                isGameOver = false
+                break
+            }
+        }
+        
+        return isGameOver
+    }
 }
-
-
 

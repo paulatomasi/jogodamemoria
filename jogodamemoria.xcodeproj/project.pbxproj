@@ -16,6 +16,7 @@
 		7D830D03229975DF00E237CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D830D01229975DF00E237CE /* LaunchScreen.storyboard */; };
 		7D830D0C2299A0EC00E237CE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D830D0B2299A0EC00E237CE /* Game.swift */; };
 		7D9F7C24229ECBE5009A76ED /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9F7C23229ECBE5009A76ED /* WelcomeViewController.swift */; };
+		7D9F7C26229EED5E009A76ED /* CongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9F7C25229EED5E009A76ED /* CongratulationsViewController.swift */; };
 		7DED8B372299AAAA00B10AFD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DED8B362299AAAA00B10AFD /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		7D830D04229975DF00E237CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D830D0B2299A0EC00E237CE /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		7D9F7C23229ECBE5009A76ED /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		7D9F7C25229EED5E009A76ED /* CongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsViewController.swift; sourceTree = "<group>"; };
 		7DED8B362299AAAA00B10AFD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 				7D7C9BC1229EB1C100212202 /* models */,
 				7D830CFA229975DE00E237CE /* GameViewController.swift */,
 				7D830CFC229975DE00E237CE /* Main.storyboard */,
+				7D9F7C25229EED5E009A76ED /* CongratulationsViewController.swift */,
 				7D830D04229975DF00E237CE /* Info.plist */,
 				7DED8B362299AAAA00B10AFD /* Extensions.swift */,
 				7D7C9BBF229EAEAA00212202 /* CardTextProvider.swift */,
@@ -168,6 +171,7 @@
 			files = (
 				7D830CFB229975DE00E237CE /* GameViewController.swift in Sources */,
 				7D7C9BC3229EB1D900212202 /* Card.swift in Sources */,
+				7D9F7C26229EED5E009A76ED /* CongratulationsViewController.swift in Sources */,
 				7D7C9BC0229EAEAA00212202 /* CardTextProvider.swift in Sources */,
 				7D830D0C2299A0EC00E237CE /* Game.swift in Sources */,
 				7D830CF9229975DE00E237CE /* AppDelegate.swift in Sources */,

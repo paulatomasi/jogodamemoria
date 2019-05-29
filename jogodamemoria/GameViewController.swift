@@ -18,6 +18,7 @@ class GameViewController: UIViewController {
         }
     }
     var cardTextProvider: CardTextProvider!
+    private let congratsSegue = "show-congratulations"
     
     @IBOutlet weak var flipCountLabel: UILabel!
     @IBOutlet var buttonsArray: [UIButton]!
@@ -27,6 +28,14 @@ class GameViewController: UIViewController {
             self.game.chooseCard(at: cardIndex)
             self.updateViewFromModel()
             self.flipCount += 1
+            
+            // só começa a validar se o jogo terminou depois que o flipCount é >=
+            // ao número de cartas, porque não tem como terminar antes disso
+            if self.flipCount >= self.game.cards.count && self.game.checkGameOver() {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+                    self.performSegue(withIdentifier: self.congratsSegue, sender: nil)
+                })
+            }
         }
     }
     

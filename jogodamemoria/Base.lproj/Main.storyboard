@@ -109,6 +109,7 @@
                         <outletCollection property="buttonsArray" destination="hdE-hQ-5pS" collectionClass="NSMutableArray" id="rt4-cc-z9Y"/>
                         <outletCollection property="buttonsArray" destination="tlV-Pg-zQg" collectionClass="NSMutableArray" id="g2F-ew-r6D"/>
                         <outletCollection property="buttonsArray" destination="x9t-Nk-1g2" collectionClass="NSMutableArray" id="rNN-qx-kI7"/>
+                        <segue destination="krE-KE-469" kind="show" identifier="show-congratulations" id="Jiy-m8-erh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -167,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="-106.40000000000001" y="22.906403940886701"/>
         </scene>
-        <!--View Controller-->
+        <!--Congratulations View Controller-->
         <scene sceneID="Xa7-bh-98R">
             <objects>
-                <viewController id="krE-KE-469" sceneMemberID="viewController">
+                <viewController id="krE-KE-469" customClass="CongratulationsViewController" customModule="jogodamemoria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EWX-vC-H5i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
