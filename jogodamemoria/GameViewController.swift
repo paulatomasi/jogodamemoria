@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameViewController: UIViewController {
     
     lazy var game = Game(numberOfPairOfCards: buttonsArray.count / 2)
     
@@ -17,7 +17,7 @@ class ViewController: UIViewController {
             flipCountLabel.text = "Flips: \(flipCount)"
         }
     }
-    let cardTextProvider: CardTextProvider = AwesomeFruitsEmojiProvider() //CuteAnimalsEmojiProvider()
+    var cardTextProvider: CardTextProvider!
     
     @IBOutlet weak var flipCountLabel: UILabel!
     @IBOutlet var buttonsArray: [UIButton]!
