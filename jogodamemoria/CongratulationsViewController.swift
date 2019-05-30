@@ -9,9 +9,9 @@
 import UIKit
 
 class CongratulationsViewController: UIViewController {
-    private let welcomeSegue = "show-welcome"
-    
     @IBAction func touchPlayAgain(_ sender: Any) {
-        self.performSegue(withIdentifier: welcomeSegue, sender: nil)
+        if let navigationController = self.navigationController {
+            navigationController.popToRootViewController(animated: true)
+        }
     }
 }
