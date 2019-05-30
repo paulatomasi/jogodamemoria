@@ -198,11 +198,17 @@
                                 <state key="normal" title="Jogar novamente">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchPlayAgain:" destination="krE-KE-469" eventType="touchUpInside" id="cAs-cS-pfW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundYellow"/>
                         <viewLayoutGuide key="safeArea" id="znf-fP-ZwX"/>
                     </view>
+                    <connections>
+                        <segue destination="9Cv-1X-tHI" kind="show" identifier="show-welcome" id="4QS-8h-O1l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pkw-Gf-yvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -214,4 +220,7 @@
             <color red="1" green="0.9882352941176471" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4QS-8h-O1l"/>
+    </inferredMetricsTieBreakers>
 </document>

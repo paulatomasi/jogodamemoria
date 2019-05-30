@@ -11,6 +11,7 @@ import Foundation
 class Game {
     var cards = [Card]()
     var indexOfFirstSelectedCardOfThePair: Int?
+    var matchedCardsCount: Int = 0
     
     init(numberOfPairOfCards: Int) {
         for index_ in 0 ..< numberOfPairOfCards {
@@ -32,6 +33,7 @@ class Game {
                 if self.cards[matchedIndex].identifier ==  self.cards[index].identifier {
                     self.cards[matchedIndex].isMatched = true
                     self.cards[index].isMatched = true
+                    self.matchedCardsCount += 2
                 }
                 
                 self.cards[index].isFaceUp = true
@@ -46,20 +48,4 @@ class Game {
             }
         }
     }
-    
-    func checkGameOver() -> Bool {
-        var isGameOver: Bool = false
-        
-        for card in self.cards {
-            if card.isMatched {
-                isGameOver = true
-            } else {
-                isGameOver = false
-                break
-            }
-        }
-        
-        return isGameOver
-    }
 }
-

@@ -29,9 +29,7 @@ class GameViewController: UIViewController {
             self.updateViewFromModel()
             self.flipCount += 1
             
-            // só começa a validar se o jogo terminou depois que o flipCount é >=
-            // ao número de cartas, porque não tem como terminar antes disso
-            if self.flipCount >= self.game.cards.count && self.game.checkGameOver() {
+            if self.game.matchedCardsCount == self.game.cards.count {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
                     self.performSegue(withIdentifier: self.congratsSegue, sender: nil)
                 })
